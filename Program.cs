@@ -14,8 +14,8 @@ namespace MergingIntoOneCollection
             string[] array1 = CreateRandomArray(random);
             string[] array2 = CreateRandomArray(random);
 
-            AdditionArray(list, array1);
-            AdditionArray(list, array2);
+            UniteElements(list, array1);
+            UniteElements(list, array2);
 
             Console.Write($"Первый массив: ");
             ShowArray(array1);
@@ -45,7 +45,7 @@ namespace MergingIntoOneCollection
             return randomArray;
         }
 
-        private static void AdditionArray(List<string> list, string[] array)
+        private static void UniteElements(List<string> list, string[] array)
         {
             for (int i = 0; i < array.Length; i++)
             {
