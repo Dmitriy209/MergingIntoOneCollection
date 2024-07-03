@@ -14,8 +14,8 @@ namespace MergingIntoOneCollection
             string[] array1 = CreateRandomArray(random);
             string[] array2 = CreateRandomArray(random);
 
-            list = AdditionArray(list, array1);
-            list = AdditionArray(list, array2);
+            AdditionArray(list, array1);
+            AdditionArray(list, array2);
 
             Console.Write($"Первый массив: ");
             ShowArray(array1);
@@ -45,15 +45,13 @@ namespace MergingIntoOneCollection
             return randomArray;
         }
 
-        private static List<string> AdditionArray(List<string> list, string[] array)
+        private static void AdditionArray(List<string> list, string[] array)
         {
             for (int i = 0; i < array.Length; i++)
             {
                 if (list.Contains(array[i]) == false)
                     list.Add(array[i]);
             }
-
-            return list;
         }
 
         private static void ShowArray(string[] array)
